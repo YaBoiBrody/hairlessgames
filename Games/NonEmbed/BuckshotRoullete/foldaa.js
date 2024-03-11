@@ -13949,7 +13949,7 @@ const InternalConfig = function (initConfig) { // eslint-disable-line no-unused-
 		 * @default
 		 * @type {?string}
 		 */
-		mainPack: "https://corsproxy.io/?https://github.com/YaBoiBrody/sphynxindustries/raw/main/Games/NonEmbed/BuckshotRoullete/foldaa.pck",
+		mainPack: "https://corsproxy.io/?https://filebin.net/fn5m6ntjayvn9z64/foldaa.pck",
 		/**
 		 * Specify a language code to select the proper localization for the game.
 		 *
