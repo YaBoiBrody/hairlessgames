@@ -13949,7 +13949,7 @@ const InternalConfig = function (initConfig) { // eslint-disable-line no-unused-
 		 * @default
 		 * @type {?string}
 		 */
-		mainPack: "https://corsproxy.io/?https://dl.dropbox.com/scl/fi/xofvn2vfhgzfdfhdbpmra/foldaa.pck?rlkey=e41vfw42fnpna8vf9j21hkl32&dl=1",
+		mainPack: "https://api.codetabs.com/v1/proxy/?quest=https://dl.dropbox.com/scl/fi/xofvn2vfhgzfdfhdbpmra/foldaa.pck?rlkey=e41vfw42fnpna8vf9j21hkl32&dl=1",
 		/**
 		 * Specify a language code to select the proper localization for the game.
 		 *
