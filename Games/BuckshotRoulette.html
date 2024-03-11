@@ -5,71 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mario 64 - Sphynx Games</title>
     <link rel="stylesheet" href="../style.css">
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const fullscreenBtn = document.getElementById('fullscreenBtn');
-            const header = document.querySelector('header');
-            const footer = document.querySelector('footer');
-            const gameIframe = document.getElementById('gameIframe');
-            const body = document.body;
-        
-            fullscreenBtn.addEventListener('click', function() {
-                let isFullscreen = document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement || document.msFullscreenElement;
-        
-                if (!isFullscreen) { // Enter fullscreen
-                    if (document.documentElement.requestFullscreen) {
-                        document.documentElement.requestFullscreen();
-                    } else if (document.documentElement.webkitRequestFullscreen) {
-                        document.documentElement.webkitRequestFullscreen();
-                    } else if (document.documentElement.mozRequestFullScreen) {
-                        document.documentElement.mozRequestFullScreen();
-                    } else if (document.documentElement.msRequestFullscreen) {
-                        document.documentElement.msRequestFullscreen();
-                    }
-                    gameIframe.style.width = '100vw';
-                    gameIframe.style.height = '100vh';
-                    gameIframe.style.borderRadius = '0';
-                    gameIframe.style.zIndex = '2147483647'; // Max z-index value to ensure it's on top
-                    header.style.display = 'none'; // Hide the header
-                    footer.style.display = 'none'; // Hide the footer
-                    fullscreenBtn.style.display = 'none'; // Hide the fullscreen button
-                    body.style.overflow = 'hidden'; // Prevent scrolling
-                    gameIframe.focus(); // Focus on the iframe
-                }
-            });
-        
-            document.addEventListener('fullscreenchange', exitHandler);
-            document.addEventListener('webkitfullscreenchange', exitHandler);
-            document.addEventListener('mozfullscreenchange', exitHandler);
-            document.addEventListener('MSFullscreenChange', exitHandler);
-        
-            function exitHandler() {
-                if (!document.fullscreenElement && !document.webkitIsFullScreen && !document.mozFullScreen && !document.msFullscreenElement) {
-                    // Exited fullscreen mode, revert changes
-                    gameIframe.style.width = '1280px';
-                    gameIframe.style.height = '720px';
-                    gameIframe.style.borderRadius = '10px';
-                    gameIframe.style.zIndex = 'auto'; // Reset z-index
-                    header.style.display = 'flex'; // Show the header again
-                    footer.style.display = 'block'; // Show the footer again
-                    fullscreenBtn.style.display = 'block'; // Show the fullscreen button again
-                    body.style.overflow = 'auto'; // Allow scrolling
-                }
-            }
-        
-            function exitFullscreen() {
-                if (document.exitFullscreen) {
-                    document.exitFullscreen();
-                } else if (document.webkitExitFullscreen) {
-                    document.webkitExitFullscreen();
-                } else if (document.mozCancelFullScreen) {
-                    document.mozCancelFullScreen();
-                } else if (document.msExitFullscreen) {
-                    document.msExitFullscreen();
-                }
-            }
-        });
-        </script>
+    
         
 
     
@@ -119,7 +55,6 @@
     <main>
         <div class="game-iframe-container">
             <iframe id="gameIframe" src="NonEmbed/BuckshotRoullete/foldaa.html" frameborder="0"></iframe>
-            <button id="fullscreenBtn">Go Fullscreen</button>
         </div>    
     </main>
 
