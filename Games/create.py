@@ -3,9 +3,9 @@
 games_info = {
     'Stacktris': 'https://boxing2.github.io/b6/stacktris/',
     'MonkeyMart': 'https://monkeymartgame.github.io/file/',
-    '1v1LOL': 'https://purepro4561.github.io/1v1-Lol/'
+    '1v1LOL': 'https://purepro4561.github.io/1v1-Lol/',
+    'BloonsTD4': 'https://www.bubbleshooter.net/embed.php?id=655',
 }
-
 
 # Base HTML template
 html_template = """<!DOCTYPE html>
@@ -116,7 +116,7 @@ html_template = """<!DOCTYPE html>
     </header>
     <main>
         <div class="game-iframe-container">
-            <iframe id="gameIframe" src="{embed_url}" frameborder="0"></iframe>
+            <iframe id="gameIframe" src="https://api.codetabs.com/v1/proxy/?quest={embed_url}" frameborder="0"></iframe>
             <button id="fullscreenBtn">Go Fullscreen</button>
         </div>    
     </main>
